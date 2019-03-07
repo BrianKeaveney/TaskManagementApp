@@ -11,5 +11,10 @@ namespace TaskManagementApp
         public List<Task> TasksAssigned { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {Surname}";
+        }
     }
 }

@@ -17,3 +17,5 @@ H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagement
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagementApp.pdb
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\HomePage.g.cs
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\HomePage.baml
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\AddUserPage.g.cs
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\AddUserPage.baml

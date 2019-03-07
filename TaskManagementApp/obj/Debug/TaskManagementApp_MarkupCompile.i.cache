@@ -1,7 +1,7 @@
 ﻿TaskManagementApp
 
 
-winexe
+exe
 C#
 .cs
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\
@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\App.xaml
-3753928916
+42060513603
 
-141997685112
+15-917775299
 131569487696
-AddTaskPage.xaml;HomePage.xaml;MainWindow.xaml;
+AddTaskPage.xaml;AddUserPage.xaml;HomePage.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -7,9 +7,35 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddTaskPage"
-      Background="White">
+      Background="White" Loaded="Page_Loaded">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="0 10" HorizontalAlignment="Right" Width="200" Grid.Column="0">
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Title:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Description:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Category:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Due Date:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Priority:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Labels:</Label>
+            <Label Margin="0 10" HorizontalAlignment="Right" FontSize="20">Responsibility:</Label>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="0 10" HorizontalAlignment="left" Width="150" Grid.Column="1">
+            <TextBox Margin="0 20" VerticalAlignment="Bottom"></TextBox>
+            <TextBox Margin="0 20" VerticalAlignment="Bottom"></TextBox>
+            <ComboBox Margin="0 20" VerticalAlignment="Bottom"></ComboBox>
+            <TextBox Margin="0 15" VerticalAlignment="Bottom"></TextBox>
+            <ComboBox Margin="0 20" VerticalAlignment="Bottom"></ComboBox>
+            <TextBox Margin="0 19" VerticalAlignment="Bottom"></TextBox>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbxResponsibility" Margin="0 16" Width="90" VerticalAlignment="Bottom" HorizontalAlignment="Left"></ComboBox>
+                <Button x:Name="btnAddUser" Width="40" Height="22" Margin="10" Click="btnAddUser_Click">Add</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

@@ -16,17 +16,31 @@ using System.Windows.Shapes;
 namespace TaskManagementApp
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for AddUserPage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class AddUserPage : Page
     {
-        public HomePage()
+        private User User = new User();
+        public AddUserPage()
         {
             InitializeComponent();
         }
 
-        private void btnAddTask_Click(object sender, RoutedEventArgs e)
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            User.FirstName = tbxFirstName.Text;
+            User.Surname = tbxSurname.Text;
+
+            DataRepo.AllUsers.Add(User);
+
             this.NavigationService.Navigate(new AddTaskPage());
         }
     }

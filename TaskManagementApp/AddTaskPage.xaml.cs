@@ -22,7 +22,17 @@ namespace TaskManagementApp
     {
         public AddTaskPage()
         {
-            InitializeComponent();
+            InitializeComponent();           
+        }
+
+        private void btnAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new AddUserPage());
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            cbxResponsibility.ItemsSource = DataRepo.AllUsers;
         }
     }
 }
