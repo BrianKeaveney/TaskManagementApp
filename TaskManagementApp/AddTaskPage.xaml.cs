@@ -34,5 +34,10 @@ namespace TaskManagementApp
         {
             cbxResponsibility.ItemsSource = DataRepo.AllUsers;
         }
+
+        private void btnFinish_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HomePage());
+        }
     }
 }

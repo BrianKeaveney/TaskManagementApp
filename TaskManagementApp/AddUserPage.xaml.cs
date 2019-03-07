@@ -24,6 +24,8 @@ namespace TaskManagementApp
         public AddUserPage()
         {
             InitializeComponent();
+            //if(tbxFirstName.Text != null)
+            //    Console.WriteLine("hello");
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -36,11 +38,13 @@ namespace TaskManagementApp
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            User.FirstName = tbxFirstName.Text;
-            User.Surname = tbxSurname.Text;
-
-            DataRepo.AllUsers.Add(User);
-
+            if (tbxFirstName.Text != null && tbxSurname.Text != null)
+            {
+                User.FirstName = tbxFirstName.Text;
+                User.Surname = tbxSurname.Text;
+                DataRepo.AllUsers.Add(User);
+            }
+  
             this.NavigationService.Navigate(new AddTaskPage());
         }
     }
