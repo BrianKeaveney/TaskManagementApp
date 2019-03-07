@@ -20,12 +20,10 @@ namespace TaskManagementApp
     /// </summary>
     public partial class AddUserPage : Page
     {
-        private User User = new User();
+        User User = new User();
         public AddUserPage()
         {
             InitializeComponent();
-            //if(tbxFirstName.Text != null)
-            //    Console.WriteLine("hello");
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -38,7 +36,8 @@ namespace TaskManagementApp
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (tbxFirstName.Text != null && tbxSurname.Text != null)
+            if (string.IsNullOrWhiteSpace(tbxFirstName.Text)) { }
+            else
             {
                 User.FirstName = tbxFirstName.Text;
                 User.Surname = tbxSurname.Text;

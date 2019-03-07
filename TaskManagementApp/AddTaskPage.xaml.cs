@@ -20,6 +20,8 @@ namespace TaskManagementApp
     /// </summary>
     public partial class AddTaskPage : Page
     {
+        Task task = new Task();
+
         public AddTaskPage()
         {
             InitializeComponent();           
@@ -32,10 +34,19 @@ namespace TaskManagementApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Array priorities = Enum.GetValues(typeof(Priority));
+
             cbxResponsibility.ItemsSource = DataRepo.AllUsers;
+            cbxPriority.ItemsSource = priorities;
         }
 
         private void btnFinish_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine(cbxPriority.SelectedItem);
+            this.NavigationService.Navigate(new HomePage());
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomePage());
         }

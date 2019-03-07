@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TaskManagementApp"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddTaskPage"
@@ -29,7 +30,7 @@
             <TextBox x:Name="tbxTitle" Margin="0 20" VerticalAlignment="Bottom"></TextBox>
             <TextBox x:Name="tbxDescription" Margin="0 20" VerticalAlignment="Bottom"></TextBox>
             <ComboBox x:Name="cbxCategory" Margin="0 20" VerticalAlignment="Bottom"></ComboBox>
-            <TextBox x:Name="tbxDueDate" Margin="0 15" VerticalAlignment="Bottom"></TextBox>
+            <DatePicker x:Name="tbxDueDate" Margin="0 15" VerticalAlignment="Bottom" ></DatePicker>
             <ComboBox x:Name="cbxPriority" Margin="0 20" VerticalAlignment="Bottom"></ComboBox>
             <TextBox x:Name="tbxLabels" Margin="0 19" VerticalAlignment="Bottom"></TextBox>
             <StackPanel Orientation="Horizontal">
@@ -38,5 +39,6 @@
             </StackPanel>
         </StackPanel>
         <Button x:Name="btnFinish" Content="Finish" Grid.Column="1" HorizontalAlignment="Left" Margin="274,378,0,0" VerticalAlignment="Top" Width="94" Height="38" RenderTransformOrigin="0.467,0.888" Click="btnFinish_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="56,378,0,0" VerticalAlignment="Top" Width="86" Height="38" Click="BtnCancel_Click"/>
     </Grid>
 </Page>

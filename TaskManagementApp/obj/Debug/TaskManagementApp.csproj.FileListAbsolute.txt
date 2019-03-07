@@ -18,3 +18,24 @@ H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\HomePage.g.cs
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\HomePage.baml
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\AddUserPage.g.cs
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\AddUserPage.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.exe.config
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.exe
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.pdb
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csprojAssemblyReference.cache
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddTaskPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddUserPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\HomePage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\MainWindow.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\App.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp_MarkupCompile.cache
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp_MarkupCompile.lref
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddTaskPage.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddUserPage.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\HomePage.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\MainWindow.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.g.resources
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.Properties.Resources.resources
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.GenerateResource.cache
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CoreCompileInputs.cache
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.exe
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.pdb
