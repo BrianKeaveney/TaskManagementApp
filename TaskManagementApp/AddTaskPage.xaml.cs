@@ -74,7 +74,8 @@ namespace TaskManagementApp
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            if(TempTask != null)
+            //question for keith
+            if(TempTask.Title != null)
             {
                 DataRepo.TasksToDo.Add(TempTask);
             }

@@ -40,3 +40,9 @@ C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\D
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.exe
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.pdb
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagementApp.csprojAssemblyReference.cache
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TasksCompletedPage.g.cs
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TasksCompletedPage.baml
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Json.dll
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Json.pdb
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Json.xml
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CopyComplete
