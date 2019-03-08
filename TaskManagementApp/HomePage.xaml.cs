@@ -116,5 +116,12 @@ namespace TaskManagementApp
                 DataRepo.TasksCompleted = JsonConvert.DeserializeObject<List<Task>>(json);
             }
         }
+
+        private void TbxTaskSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string searchTerm = tbxTaskSearch.Text.ToLower();
+
+            lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.Title.ToLower().Contains(searchTerm));
+        }
     }
 }

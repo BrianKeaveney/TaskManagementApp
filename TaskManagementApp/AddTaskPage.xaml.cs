@@ -85,12 +85,14 @@ namespace TaskManagementApp
 
         private void FillFields(Task editedTask)
         {
+            
             tbxTitle.Text = editedTask.Title;
             tbxDescription.Text = editedTask.Description;
             cbxCategory.SelectedItem = editedTask.TaskCategory;
             tbxDueDate.SelectedDate = editedTask.DueDate;
             cbxPriority.SelectedItem = editedTask.TaskPriority;
             tbxLabels.Text = editedTask.Tags;
+            Console.WriteLine(editedTask.Responsibility+"1");
             cbxResponsibility.SelectedItem = editedTask.Responsibility;
         }
     }

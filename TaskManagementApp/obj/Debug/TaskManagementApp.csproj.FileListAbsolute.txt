@@ -46,3 +46,9 @@ H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Jso
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Json.pdb
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\bin\Debug\Newtonsoft.Json.xml
 H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CopyComplete
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TasksCompletedPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TasksCompletedPage.baml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CopyComplete
