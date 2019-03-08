@@ -43,8 +43,11 @@ namespace TaskManagementApp
                 User.Surname = tbxSurname.Text;
                 DataRepo.AllUsers.Add(User);
             }
-  
-            this.NavigationService.Navigate(new AddTaskPage());
+
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
     }
 }

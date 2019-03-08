@@ -39,3 +39,4 @@ C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\D
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CoreCompileInputs.cache
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.exe
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.pdb
+H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\TaskManagementApp.csprojAssemblyReference.cache

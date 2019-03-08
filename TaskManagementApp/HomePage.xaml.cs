@@ -25,9 +25,26 @@ namespace TaskManagementApp
             InitializeComponent();
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxTasks.ItemsSource = null;
+            lbxTasks.ItemsSource = DataRepo.TasksToDo;
+        }
+
         private void btnAddTask_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new AddTaskPage());
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Task selectedTask = lbxTasks.SelectedItem as Task;
+
+            if(selectedTask != null)
+            {
+                this.NavigationService.Navigate(new AddTaskPage(selectedTask));
+                DataRepo.TasksToDo.Remove(selectedTask);
+            }
         }
     }
 }

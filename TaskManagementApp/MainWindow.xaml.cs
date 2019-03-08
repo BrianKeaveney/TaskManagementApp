@@ -30,6 +30,8 @@ namespace TaskManagementApp
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            DataRepo.AllUsers = DataRepo.GetUsers();
+
             frame.NavigationService.Navigate(new HomePage());
         }
 

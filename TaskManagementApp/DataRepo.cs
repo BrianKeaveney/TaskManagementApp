@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +11,28 @@ namespace TaskManagementApp
     {
         public static List<Task> TasksToDo { get; set; } = new List<Task>();
         public static List<Task> TasksCompleted { get; set; } = new List<Task>();
-        public static List<User> AllUsers { get; set; } = new List<User>();
+        public static ObservableCollection<User> AllUsers { get; set; } = new ObservableCollection<User>();
 
-        //public static List<User> GetUsers()
-        //{
-        //    List<User> users = new List<User>();
+        public static ObservableCollection<User> GetUsers()
+        {
+            ObservableCollection<User> users = new ObservableCollection<User>();
 
-        //    User u1 = new User() { FirstName = "brian", Surname = "keaveney", TasksAssigned = TasksToDo};
+            User u1 = new User() { FirstName = "brian", Surname = "keaveney" };
+            User u2 = new User() { FirstName = "Tom", Surname = "Sawyer" };
+            User u3 = new User() { FirstName = "Eddie", Surname = "Dean" };
 
-        //    users.Add(u1);
+            users.Add(u1);
+            users.Add(u2);
+            users.Add(u3);
 
-        //    return users;
-        //}
+            return users;
+        }
 
         //public static List<Task> GetTasks()
         //{
         //    List<Task> tasks = new List<Task>();
 
-          
+
         //    return tasks;
         //}
     }
