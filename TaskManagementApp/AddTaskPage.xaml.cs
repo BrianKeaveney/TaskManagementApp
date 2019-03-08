@@ -92,7 +92,7 @@ namespace TaskManagementApp
             tbxDueDate.SelectedDate = editedTask.DueDate;
             cbxPriority.SelectedItem = editedTask.TaskPriority;
             tbxLabels.Text = editedTask.Tags;
-            Console.WriteLine(editedTask.Responsibility+"1");
+            Console.WriteLine(editedTask.Responsibility+"1"); //question for keith
             cbxResponsibility.SelectedItem = editedTask.Responsibility;
         }
     }

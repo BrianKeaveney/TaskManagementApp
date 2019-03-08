@@ -43,7 +43,7 @@ namespace TaskManagementApp
 
         public void GetLabels()
         {
-            Labels = Tags.Split(',', ' ');
+            Labels = Tags.Split(' ', ',');
         }
 
         public override string ToString()
