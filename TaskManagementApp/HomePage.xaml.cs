@@ -46,5 +46,18 @@ namespace TaskManagementApp
                 DataRepo.TasksToDo.Remove(selectedTask);
             }
         }
+
+        private void btnDeleteTask_Click(object sender, RoutedEventArgs e)
+        {
+            Task selectedTask = lbxTasks.SelectedItem as Task;
+
+            if(selectedTask != null)
+            {
+                DataRepo.TasksToDo.Remove(selectedTask);
+
+                lbxTasks.ItemsSource = null;
+                lbxTasks.ItemsSource = DataRepo.TasksToDo;
+            }
+        }
     }
 }
