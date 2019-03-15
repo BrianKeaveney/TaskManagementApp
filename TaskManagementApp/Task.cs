@@ -25,11 +25,13 @@ namespace TaskManagementApp
                 return GetColour();
             }
         }
+        public string IsVisible { get; set; }
 
         public event EventHandler<TaskOverdueEventArgs> TaskOverdue;
 
         public Task()
         {
+            IsVisible = "Hidden";
         }
 
         public Task(string title, User responsibility)
@@ -65,11 +67,11 @@ namespace TaskManagementApp
         {
             if(DateTime.Now > DueDate)
             {
-                OnDateOverdue(true);
+                OnDateOverdue("Visible");
             }
         }
 
-        private void OnDateOverdue(bool result)
+        private void OnDateOverdue(string result)
         {
             if (TaskOverdue != null)
                 TaskOverdue(this, new TaskOverdueEventArgs(result));

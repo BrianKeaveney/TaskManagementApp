@@ -8,9 +8,9 @@ namespace TaskManagementApp
 {
     public class TaskOverdueEventArgs : EventArgs
     {
-        public bool IsOverdue { get; set; }
+        public string IsOverdue { get; set; }
 
-        public TaskOverdueEventArgs(bool isOverdue)
+        public TaskOverdueEventArgs(string isOverdue)
         {
             IsOverdue = isOverdue;
         }

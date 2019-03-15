@@ -17,6 +17,7 @@
                 <TextBlock Text="{Binding Path=Title}"></TextBlock>
                 <TextBlock Text="{Binding Path=TaskPriority}" Margin="20"></TextBlock>
                 <TextBlock Text="{Binding Path=DueDate, StringFormat={}{0:dd/MM/yyyy}}"/>
+                <Image x:Name="warningImage" Source="/images/warning.png" Height="35" Visibility="{Binding Path=IsVisible}"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
