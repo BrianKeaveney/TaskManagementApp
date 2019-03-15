@@ -8,6 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HomePage"
       Background="White" Loaded="Page_Loaded">
+    <Page.Resources>
+        <Style x:Key="priority" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="{Binding Path=Colour}"/>
+        </Style>
+        <DataTemplate x:Key="tasksTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Title}"></TextBlock>
+                <TextBlock Text="{Binding Path=TaskPriority}" Margin="20"></TextBlock>
+                <TextBlock Text="{Binding Path=DueDate, StringFormat={}{0:dd/MM/yyyy}}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -18,8 +30,7 @@
             <ColumnDefinition Width="89*"/>
             <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbxTasks" HorizontalAlignment="Center" Height="260" Margin="148,125,0,0" VerticalAlignment="Top" Width="554" Grid.Column="0"/>
-
+        <ListBox x:Name="lbxTasks" ItemTemplate="{StaticResource tasksTemplate}" ItemContainerStyle="{StaticResource priority}" HorizontalAlignment="Center" Height="260" Margin="148,125,0,0" VerticalAlignment="Top" Width="554" Grid.Column="0" BorderThickness="3,3,3,3"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2">
             <Button x:Name="btnAddTask" Content="Add" HorizontalAlignment="Center" Margin="40 20" VerticalAlignment="Top" Width="75" Click="btnAddTask_Click"/>
             <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Center" Margin="40 20" VerticalAlignment="Top" Width="75" Click="btnEdit_Click"/>

@@ -21,7 +21,6 @@ H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\AddUserPage.ba
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.exe.config
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.exe
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\Debug\TaskManagementApp.pdb
-C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csprojAssemblyReference.cache
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddTaskPage.g.cs
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\AddUserPage.g.cs
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\HomePage.g.cs

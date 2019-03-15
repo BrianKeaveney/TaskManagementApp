@@ -4,16 +4,16 @@
 exe
 C#
 .cs
-H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\obj\Debug\
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\
 TaskManagementApp
 none
 false
 DEBUG;TRACE
-H:\second year\Semester 2\Foop202\CA1\TaskManagementApp\App.xaml
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\App.xaml
 5-1031739225
 
-13692416901
-14878821023
+13842027374
+141876753389
 AddTaskPage.xaml;AddUserPage.xaml;HomePage.xaml;MainWindow.xaml;TasksCompletedPage.xaml;
 
 False

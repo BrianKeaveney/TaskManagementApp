@@ -32,7 +32,10 @@ namespace TaskManagementApp
         {
             DataRepo.AllUsers = DataRepo.GetUsers();
 
-            frame.NavigationService.Navigate(new HomePage());
+            HomePage IndexPage = new HomePage();
+            IndexPage.CallCustomEvent();
+
+            frame.NavigationService.Navigate(IndexPage);
         }
 
         //private void TestMethod()

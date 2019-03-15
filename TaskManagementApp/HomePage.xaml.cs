@@ -25,9 +25,7 @@ namespace TaskManagementApp
     {
         public HomePage()
         {
-            InitializeComponent();
-            //Console.WriteLine(DateTime.Now);
-            
+            InitializeComponent();            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -38,7 +36,22 @@ namespace TaskManagementApp
             lbxTasks.ItemsSource = null;
             lbxTasks.ItemsSource = DataRepo.TasksToDo;
             cbxCategory.ItemsSource = categories;
-            cbxPriority.ItemsSource = priorities;
+            cbxPriority.ItemsSource = priorities;           
+        }
+
+        public void CallCustomEvent()
+        {
+            foreach (Task task in DataRepo.TasksToDo)
+            {
+                task.TaskOverdue += new EventHandler<TaskOverdueEventArgs>(TaskOverdue);
+                task.CheckDates();
+            }
+        }
+
+        private void TaskOverdue(object sender, TaskOverdueEventArgs e)
+        {
+            Console.WriteLine("task is overdue");
+            Console.WriteLine(e.IsOverdue);
         }
 
         private void btnAddTask_Click(object sender, RoutedEventArgs e)
@@ -124,7 +137,6 @@ namespace TaskManagementApp
                 DataRepo.TasksCompleted = JsonConvert.DeserializeObject<List<Task>>(json);
             }
 
-            DataRepo.TasksToDo[0].IsOverdue();
         }
 
         private void TbxTaskSearch_KeyUp(object sender, KeyEventArgs e)
@@ -180,9 +192,9 @@ namespace TaskManagementApp
             }
         }
 
-        private void OnDateOverdue(object sender, EventArgs e)
-        {
-            Console.WriteLine("event works");
-        }
+        //private void OnDateOverdue(object sender, EventArgs e)
+        //{
+        //    Console.WriteLine("event works");
+        //}
     }
 }
