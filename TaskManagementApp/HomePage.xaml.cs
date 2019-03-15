@@ -26,6 +26,8 @@ namespace TaskManagementApp
         public HomePage()
         {
             InitializeComponent();
+            //Console.WriteLine(DateTime.Now);
+            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -121,6 +123,8 @@ namespace TaskManagementApp
 
                 DataRepo.TasksCompleted = JsonConvert.DeserializeObject<List<Task>>(json);
             }
+
+            DataRepo.TasksToDo[0].IsOverdue();
         }
 
         private void TbxTaskSearch_KeyUp(object sender, KeyEventArgs e)
@@ -174,6 +178,11 @@ namespace TaskManagementApp
             {
                 lbxTasks.ItemsSource = DataRepo.TasksToDo.OrderByDescending(t => t.DueDate);
             }
+        }
+
+        private void OnDateOverdue(object sender, EventArgs e)
+        {
+            Console.WriteLine("event works");
         }
     }
 }

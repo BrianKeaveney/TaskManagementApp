@@ -71,6 +71,7 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaskEventArgs.cs" />
     <Compile Include="TasksCompletedPage.xaml.cs">
       <DependentUpon>TasksCompletedPage.xaml</DependentUpon>
     </Compile>

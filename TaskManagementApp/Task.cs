@@ -10,6 +10,7 @@ namespace TaskManagementApp
     public enum Priority { Low, Medium, High};
     public class Task
     {
+        public delegate void DateOverdueEventHandler(object source, EventArgs args);
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime? DueDate { get; set; }
@@ -18,10 +19,14 @@ namespace TaskManagementApp
         public Category TaskCategory { get; set; }
         public Priority TaskPriority { get; set; }
         public User Responsibility { get; set; }
+        public bool IsDateOverdue { get; set; } = false;
+
+        public event DateOverdueEventHandler Overdue;
+
+        //private bool taskIsOverdue;
 
         public Task()
         {
-
         }
 
         public Task(string title, User responsibility)
@@ -45,6 +50,27 @@ namespace TaskManagementApp
         {
             Tags = Tags.Replace(" ", String.Empty);
             Labels = Tags.Split(',');
+        }
+        protected virtual void OnDateOverdue()
+        {
+            if(Overdue != null)
+            {
+                Overdue(this, EventArgs.Empty);
+            }
+            //DateTime example = new DateTime(2019, 03, 15, 15, 22,0);
+            //if (DateTime.Now == example)
+            //{
+            //    Overdue(this, new TaskEventArgs("true"));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("false");
+            //}
+        }
+
+        private void OnDateOverdue(object sender, EventArgs e)
+        {
+            IsDateOverdue = true;
         }
 
         public override string ToString()
