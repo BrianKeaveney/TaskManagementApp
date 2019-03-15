@@ -33,5 +33,7 @@
         </StackPanel>
         <Button x:Name="btnCompletedTasks" Content="Completed Tasks" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Click="btnCompletedTasks_Click"/>
         <TextBox x:Name="tbxTaskSearch" HorizontalAlignment="Left" Height="23" Margin="153,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TbxTaskSearch_KeyUp"/>
+        <ComboBox x:Name="cbxPriority" HorizontalAlignment="Left" Margin="587,80,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SelectionChanged"/>
+        <ComboBox x:Name="cbxCategory" HorizontalAlignment="Left" Margin="445,81,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SelectionChanged"/>
     </Grid>
 </Page>

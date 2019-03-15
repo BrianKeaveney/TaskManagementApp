@@ -49,7 +49,7 @@ namespace TaskManagementApp
 
         public override string ToString()
         {
-            return $"{Title} {Responsibility.FirstName} {TaskCategory} {DueDate} {TaskPriority} {Labels[1]}";
+            return $"{Title} {Responsibility.FirstName} {TaskCategory} {DueDate} {TaskPriority}";
         }
     }
 }

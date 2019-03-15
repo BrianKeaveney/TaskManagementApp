@@ -27,6 +27,7 @@ namespace TaskManagementApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            lbxTasksCompleted.ItemsSource = null;
             lbxTasksCompleted.ItemsSource = DataRepo.TasksCompleted;
         }
 

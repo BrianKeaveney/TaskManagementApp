@@ -29,8 +29,13 @@ namespace TaskManagementApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Array priorities = Enum.GetValues(typeof(Priority));
+            Array categories = Enum.GetValues(typeof(Category));
+
             lbxTasks.ItemsSource = null;
             lbxTasks.ItemsSource = DataRepo.TasksToDo;
+            cbxCategory.ItemsSource = categories;
+            cbxPriority.ItemsSource = priorities;
         }
 
         private void btnAddTask_Click(object sender, RoutedEventArgs e)
@@ -122,6 +127,15 @@ namespace TaskManagementApp
             string searchTerm = tbxTaskSearch.Text.ToLower();
            
             lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.Title.ToLower().Contains(searchTerm) || t.Tags.ToLower().Contains(searchTerm));
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cbx = sender as ComboBox;
+
+            string searchTerm = cbx.SelectedItem.ToString();
+
+            lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskCategory.ToString().Equals(searchTerm) || t.TaskPriority.ToString().Equals(searchTerm));
         }
     }
 }
