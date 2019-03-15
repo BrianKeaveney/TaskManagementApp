@@ -1,23 +1,20 @@
 [
   {
-    "Title": "dffff",
+    "Title": "walk the dog",
     "Description": "",
     "DueDate": "2019-03-21T00:00:00",
     "Labels": [
-      "a",
-      "",
-      "th",
-      "",
-      "tttttt",
-      ""
+      "walk",
+      "outside",
+      "exercise"
     ],
-    "Tags": "a, th, tttttt,",
+    "Tags": "walk,outside,exercise",
     "TaskCategory": 2,
     "TaskPriority": 2,
     "Responsibility": {
       "TasksAssigned": null,
-      "FirstName": "asdf",
-      "Surname": "adf"
+      "FirstName": "brian",
+      "Surname": "keaveney"
     }
   }
 ]

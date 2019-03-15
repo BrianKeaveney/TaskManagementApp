@@ -43,12 +43,13 @@ namespace TaskManagementApp
 
         public void GetLabels()
         {
-            Labels = Tags.Split(' ', ',');
+            Tags = Tags.Replace(" ", String.Empty);
+            Labels = Tags.Split(',');
         }
 
         public override string ToString()
         {
-            return $"{Title} {Responsibility.FirstName}";
+            return $"{Title} {Responsibility.FirstName} {TaskCategory} {DueDate} {TaskPriority} {Labels[1]}";
         }
     }
 }

@@ -120,8 +120,8 @@ namespace TaskManagementApp
         private void TbxTaskSearch_KeyUp(object sender, KeyEventArgs e)
         {
             string searchTerm = tbxTaskSearch.Text.ToLower();
-
-            lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.Title.ToLower().Contains(searchTerm));
+           
+            lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.Title.ToLower().Contains(searchTerm) || t.Tags.ToLower().Contains(searchTerm));
         }
     }
 }
