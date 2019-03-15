@@ -34,20 +34,5 @@ namespace TaskManagementApp
 
             frame.NavigationService.Navigate(new HomePage());
         }
-
-        //private void TestMethod()
-        //{
-
-        //    ObservableCollection<string> names = new ObservableCollection<string>();
-
-        //    List<string> names2 = names.ToList();
-
-
-        //    ObservableCollection<string> names3 = new ObservableCollection<string>(names2);
-
-
-
-
-        //}
     }
 }

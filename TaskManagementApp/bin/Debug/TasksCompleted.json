@@ -13,7 +13,9 @@
       "TasksAssigned": null,
       "FirstName": "Tom",
       "Surname": "Sawyer"
-    }
+    },
+    "Colour": "White",
+    "IsVisible": "Hidden"
   },
   {
     "Title": "fffrreeqwwe",
@@ -29,7 +31,9 @@
       "TasksAssigned": null,
       "FirstName": "Tom",
       "Surname": "Sawyer"
-    }
+    },
+    "Colour": "White",
+    "IsVisible": "Hidden"
   },
   {
     "Title": "555",
@@ -45,6 +49,8 @@
       "TasksAssigned": null,
       "FirstName": "brian",
       "Surname": "keaveney"
-    }
+    },
+    "Colour": "#FFB42222",
+    "IsVisible": "Hidden"
   }
 ]

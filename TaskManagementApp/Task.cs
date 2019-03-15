@@ -81,6 +81,11 @@ namespace TaskManagementApp
         {
             Tags = Tags.Replace(" ", String.Empty);
             Labels = Tags.Split(',');
+
+            for (int i = 0; i < Labels.Length; i++)
+            {
+                Labels[i] = $"#{Labels[i]}";
+            }
         }
 
         public override string ToString()
