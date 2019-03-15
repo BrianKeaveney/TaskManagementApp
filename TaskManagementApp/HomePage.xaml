@@ -35,5 +35,8 @@
         <TextBox x:Name="tbxTaskSearch" HorizontalAlignment="Left" Height="23" Margin="153,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="TbxTaskSearch_KeyUp"/>
         <ComboBox x:Name="cbxPriority" HorizontalAlignment="Left" Margin="587,80,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SelectionChanged"/>
         <ComboBox x:Name="cbxCategory" HorizontalAlignment="Left" Margin="445,81,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SelectionChanged"/>
+        <Button x:Name="btnClearFilter" Content="Clear Filters" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.067,0.7" Grid.Column="1" Click="btnClearFilter_Click"/>
+        <RadioButton x:Name="rdoClosest" Content="Closest" HorizontalAlignment="Left" Margin="617,10,0,0" VerticalAlignment="Top" GroupName="DateFilter" Checked="DateFilter_Checked"/>
+        <RadioButton x:Name="rdoFurthest" Content="Furthest" HorizontalAlignment="Left" Margin="617,30,0,0" VerticalAlignment="Top" Checked="DateFilter_Checked" GroupName="DateFilter"/>
     </Grid>
 </Page>

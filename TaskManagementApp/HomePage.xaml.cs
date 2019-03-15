@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -132,10 +133,47 @@ namespace TaskManagementApp
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cbx = sender as ComboBox;
-
             string searchTerm = cbx.SelectedItem.ToString();
 
-            lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskCategory.ToString().Equals(searchTerm) || t.TaskPriority.ToString().Equals(searchTerm));
+            if(cbx.Name == "cbxCategory" && cbxPriority.SelectedItem == null)
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskCategory.ToString().Equals(searchTerm));
+            }
+            else if(cbx.Name =="cbxPriority" && cbxCategory.SelectedItem == null)
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskPriority.ToString().Equals(searchTerm));
+            }
+            else if(cbxCategory.SelectedItem != null && cbx.Name == "cbxPriority")
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskPriority.ToString().Equals(searchTerm) && t.TaskCategory.ToString().Equals(cbxCategory.SelectedItem.ToString()));
+            }
+            else if(cbxPriority.SelectedItem != null && cbx.Name =="cbxCategory")
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.TaskCategory.ToString().Equals(searchTerm) && t.TaskPriority.ToString().Equals(cbxPriority.SelectedItem.ToString()));
+            }
+            else
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo;
+            }
+        }
+
+        private void btnClearFilter_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HomePage());
+        }
+
+        private void DateFilter_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton selected = sender as RadioButton;
+
+            if(selected.Name == "rdoClosest")
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.OrderBy(t => t.DueDate);
+            }
+            else
+            {
+                lbxTasks.ItemsSource = DataRepo.TasksToDo.OrderByDescending(t => t.DueDate);
+            }
         }
     }
 }
