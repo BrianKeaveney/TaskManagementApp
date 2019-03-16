@@ -4,6 +4,57 @@
              xmlns:local="clr-namespace:TaskManagementApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style x:Key="priority" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="{Binding Path=Colour}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="LightGray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <DataTemplate x:Key="tasksTemplate">
+            <Grid Height="90">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="93"/>
+                    <ColumnDefinition Width="93"/>
+                    <ColumnDefinition Width="93"/>
+                    <ColumnDefinition Width="93"/>
+                    <ColumnDefinition Width="93"/>
+                    <ColumnDefinition Width="93"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Path=Title}" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" FontSize="18" Grid.ColumnSpan="3" FontFamily="Franklin Gothic Book" FontWeight="Heavy" FontStyle="Italic"/>
+                <TextBlock Text="{Binding Path=Description}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Franklin Gothic Book"/>
+                <TextBlock Text="{Binding Path=TaskCategory}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" FontFamily="Franklin Gothic Book"/>
+                <TextBlock Text="{Binding Path=DueDate, StringFormat={}{0:dd/MM/yyyy}}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14" FontFamily="Franklin Gothic Book"/>
+                <TextBlock Text="{Binding Path=Responsibility}" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14" FontFamily="Franklin Gothic Book"/>
+                <TextBlock Text="{Binding Path=TaskPriority}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Book"/>
+                <Image x:Name="warningImage" Source="/images/warning.png" Height="35" Visibility="{Binding Path=IsVisible}" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" />
+                <StackPanel Orientation="Vertical" Margin="20" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Right" >
+                    <TextBlock Text="{Binding Path=Labels[0]}" FontFamily="Franklin Gothic Book"></TextBlock>
+                    <TextBlock Text="{Binding Path=Labels[1]}" FontFamily="Franklin Gothic Book"></TextBlock>
+                    <TextBlock Text="{Binding Path=Labels[2]}" FontFamily="Franklin Gothic Book"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        
         <Style TargetType="{x:Type Button}" x:Key="buttonStyle">
             <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="White"/>

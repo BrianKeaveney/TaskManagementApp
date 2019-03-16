@@ -10,7 +10,28 @@
       Background="#FF464343" Loaded="Page_Loaded">
 
     <Grid>
-        <ListBox x:Name="lbxTasksCompleted" HorizontalAlignment="Left" Height="244" Margin="243,107,0,0" VerticalAlignment="Top" Width="362"/>
-        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="83,47,0,0" VerticalAlignment="Top" Width="75" Click="btnHome_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbxTasksCompleted" ItemTemplate="{StaticResource tasksTemplate}" ItemContainerStyle="{StaticResource priority}" Grid.Column="0" BorderThickness="3,3,3,3" Margin="56,6,56,0" Grid.Row="2" Background="LightGray"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="30" Margin="60 0">
+            <TextBox x:Name="tbxTaskSearch" Height="24" TextWrapping="Wrap" Text="" Width="120" KeyUp="TbxTaskSearch_KeyUp"/>
+            <ComboBox x:Name="cbxPriority" Width="120" SelectionChanged="SelectionChanged" Margin="36 0"/>
+            <ComboBox x:Name="cbxCategory" Width="120" SelectionChanged="SelectionChanged" Margin="20 0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" Margin="40 0" VerticalAlignment="Bottom">
+            <RadioButton x:Name="rdoClosest" Content="Closest" VerticalAlignment="Top" GroupName="DateFilter" Checked="DateFilter_Checked" Foreground="White"/>
+            <RadioButton x:Name="rdoFurthest" Content="Furthest" VerticalAlignment="Top" Checked="DateFilter_Checked" GroupName="DateFilter" Margin="5 0" Foreground="White"/>
+        </StackPanel>
+        <Button x:Name="btnClearFilter" Content="Clear Filters" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.067,0.7" Grid.Column="1" Click="btnClearFilter_Click" Style="{StaticResource buttonStyle}"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="75" Click="btnHome_Click" Style="{StaticResource buttonStyle}"/>
+        <Label Content="Completed Tasks" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28" FontFamily="Franklin Gothic Book" Foreground="#FFB60C0C" FontWeight="Bold" />
     </Grid>
 </Page>
