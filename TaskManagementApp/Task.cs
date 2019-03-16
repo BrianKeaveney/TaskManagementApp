@@ -18,7 +18,7 @@ namespace TaskManagementApp
         public Category TaskCategory { get; set; }
         public Priority TaskPriority { get; set; }
         public User Responsibility { get; set; }
-        public string Colour
+        public string Colour // based on what priority the task is
         {
             get
             {
@@ -63,6 +63,7 @@ namespace TaskManagementApp
                 return "White";
         }
 
+        //when task is overdue event is called
         public void CheckDates()
         {
             if(DateTime.Now > DueDate)
@@ -77,6 +78,7 @@ namespace TaskManagementApp
                 TaskOverdue(this, new TaskOverdueEventArgs(result));
         }
 
+        //tags split up from being a string into an array of strings
         public void GetLabels()
         {
             Tags = Tags.Replace(" ", String.Empty);
@@ -86,11 +88,6 @@ namespace TaskManagementApp
             {
                 Labels[i] = $"#{Labels[i]}";
             }
-        }
-
-        public override string ToString()
-        {           
-            return $"{Title} {Responsibility.FirstName} {TaskCategory} {DueDate} {TaskPriority}";
         }
     }
 }

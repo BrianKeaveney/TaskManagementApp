@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:TaskManagementApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--background colour of the listbox item is dependent on the task priority-->
         <Style x:Key="priority" TargetType="ListBoxItem">
             <Setter Property="Background" Value="{Binding Path=Colour}"/>
             <Setter Property="Template">
@@ -25,6 +26,7 @@
             </Style.Triggers>
         </Style>
         
+        <!--if the the date is overdue for the task the warning image will be made visible-->
         <DataTemplate x:Key="tasksTemplate">
             <Grid Height="90">
                 <Grid.RowDefinitions>

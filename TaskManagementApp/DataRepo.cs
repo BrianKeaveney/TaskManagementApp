@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManagementApp
 {
+    //acts as a database for the application
     public static class DataRepo
     {
         public static List<Task> TasksToDo { get; set; } = new List<Task>();

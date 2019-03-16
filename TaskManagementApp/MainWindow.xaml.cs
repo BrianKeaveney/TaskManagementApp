@@ -24,13 +24,11 @@ namespace TaskManagementApp
         public MainWindow()
         {
             InitializeComponent();
-
-            Loaded += Window_Loaded;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DataRepo.AllUsers = DataRepo.GetUsers();
+            DataRepo.AllUsers = DataRepo.GetUsers(); // sample users loaded in
 
             frame.NavigationService.Navigate(new HomePage());
         }

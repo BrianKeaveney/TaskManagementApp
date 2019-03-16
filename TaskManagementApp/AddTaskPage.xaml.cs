@@ -26,6 +26,7 @@ namespace TaskManagementApp
             InitializeComponent();           
         }
 
+        //this constructor is only called when you click to edit a task
         public AddTaskPage(Task editTask): this()
         {
             TempTask = editTask;
@@ -36,6 +37,7 @@ namespace TaskManagementApp
             this.NavigationService.Navigate(new AddUserPage());
         }
 
+        //when the page is loaded all of the combo boxes are filled with values
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Array priorities = Enum.GetValues(typeof(Priority));
@@ -46,6 +48,7 @@ namespace TaskManagementApp
             cbxCategory.ItemsSource = categories;
         }
 
+        //if the task is given a title and responsibility then the new task is created and added to the list of tasks to do
         private void btnFinish_Click(object sender, RoutedEventArgs e)
         {
             if(string.IsNullOrWhiteSpace(tbxTitle.Text) || cbxResponsibility.SelectedItem == null)
@@ -72,10 +75,11 @@ namespace TaskManagementApp
 
         }
 
+        //only if the temp task has values can it be added back to the list of tasks to do
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            //question for keith
-            if(TempTask.Title != null)
+            // temptask will have values if a task is being edited
+            if (TempTask.Title != null) // temptask.title checked because by default a temptask will have values having enums as part of the object
             {
                 DataRepo.TasksToDo.Add(TempTask);
             }
@@ -83,9 +87,10 @@ namespace TaskManagementApp
             this.NavigationService.Navigate(new HomePage());
         }
 
+        //function is called when you are editing a task
         private void FillFields(Task editedTask)
         {
-            
+            // all of the fields are filled in from the task you are editing
             tbxTitle.Text = editedTask.Title;
             tbxDescription.Text = editedTask.Description;
             cbxCategory.SelectedItem = editedTask.TaskCategory;

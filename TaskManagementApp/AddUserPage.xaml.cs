@@ -36,7 +36,7 @@ namespace TaskManagementApp
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbxFirstName.Text)) { }
+            if (string.IsNullOrWhiteSpace(tbxFirstName.Text)) { } // only if the firstname field is filled in can a user be added
             else
             {
                 User.FirstName = tbxFirstName.Text;

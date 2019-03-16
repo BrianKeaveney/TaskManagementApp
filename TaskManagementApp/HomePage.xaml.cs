@@ -41,6 +41,7 @@ namespace TaskManagementApp
             CallCustomEvent();
         }
 
+        //TaskOverdueEvent is activated for each task object
         private void CallCustomEvent()
         {
             foreach (Task task in DataRepo.TasksToDo)
@@ -50,6 +51,7 @@ namespace TaskManagementApp
             }
         }
 
+        //when the task is overdue the task property is equal to Visible
         private void TaskOverdue(object sender, TaskOverdueEventArgs e)
         {
             Task task = sender as Task;
@@ -104,6 +106,7 @@ namespace TaskManagementApp
             this.NavigationService.Navigate(new TasksCompletedPage());
         }
 
+        //when the save button is clicked the taskstodo list and taskscompleted list are saved into a json file
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             string json1 = JsonConvert.SerializeObject(DataRepo.TasksToDo, Formatting.Indented);
@@ -120,6 +123,7 @@ namespace TaskManagementApp
             }
         }
 
+        //when the load button is clicked the json files are deserialized into the taskstodo list and taskscompleted list and the itemsource for lbxtasks is reset 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
         {
             using (StreamReader sr = new StreamReader(@"TasksToDo.json"))
@@ -139,8 +143,9 @@ namespace TaskManagementApp
                 DataRepo.TasksCompleted = JsonConvert.DeserializeObject<List<Task>>(json);
             }
             CallCustomEvent();
-        }
+        }//click on the load button to see some sample tasks
 
+        //if the tasktodo list contains the title searched for or the label searched for
         private void TbxTaskSearch_KeyUp(object sender, KeyEventArgs e)
         {
             string searchTerm = tbxTaskSearch.Text.ToLower();
@@ -148,6 +153,7 @@ namespace TaskManagementApp
             lbxTasks.ItemsSource = DataRepo.TasksToDo.Where(t => t.Title.ToLower().Contains(searchTerm) || t.Tags.ToLower().Contains(searchTerm));
         }
 
+        //searches the taskstodo list based on what item is selected in the combo box. a dual search can be made if both the combo boxes are used
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cbx = sender as ComboBox;
@@ -175,6 +181,7 @@ namespace TaskManagementApp
             }
         }
 
+        //page is refreshed to clear any filters present
         private void btnClearFilter_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomePage());

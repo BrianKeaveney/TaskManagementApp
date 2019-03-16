@@ -18,6 +18,8 @@ namespace TaskManagementApp
     /// <summary>
     /// Interaction logic for TasksCompletedPage.xaml
     /// </summary>
+
+    //same filter options as homepage, methods explained there
     public partial class TasksCompletedPage : Page
     {
         public TasksCompletedPage()
