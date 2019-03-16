@@ -8,7 +8,6 @@ namespace TaskManagementApp
 {
     public class User
     {
-        public List<Task> TasksAssigned { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
 

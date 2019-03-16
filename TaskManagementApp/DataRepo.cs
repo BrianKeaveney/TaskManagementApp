@@ -27,13 +27,5 @@ namespace TaskManagementApp
 
             return users;
         }
-
-        //public static List<Task> GetTasks()
-        //{
-        //    List<Task> tasks = new List<Task>();
-
-
-        //    return tasks;
-        //}
     }
 }

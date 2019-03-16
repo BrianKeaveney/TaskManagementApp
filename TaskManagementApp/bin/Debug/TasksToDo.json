@@ -1,56 +1,73 @@
 [
   {
-    "Title": "new",
+    "Title": "take out rubbish",
     "Description": "",
-    "DueDate": null,
+    "DueDate": "2019-03-17T00:00:00",
     "Labels": [
-      ""
+      "#bin",
+      "#chores"
     ],
-    "Tags": "",
-    "TaskCategory": 0,
+    "Tags": "bin,chores",
+    "TaskCategory": 1,
     "TaskPriority": 1,
     "Responsibility": {
-      "TasksAssigned": null,
-      "FirstName": "Eddie",
-      "Surname": "Dean"
+      "FirstName": "brian",
+      "Surname": "keaveney"
     },
     "Colour": "#FFD1651A",
     "IsVisible": "Hidden"
   },
   {
-    "Title": "water the plants",
-    "Description": "",
-    "DueDate": "2019-03-03T00:00:00",
+    "Title": "wash dishes",
+    "Description": "clean all of the dishes at the sink",
+    "DueDate": "2019-03-15T00:00:00",
     "Labels": [
-      ""
+      "#dishes"
     ],
-    "Tags": "",
-    "TaskCategory": 1,
-    "TaskPriority": 0,
+    "Tags": "dishes",
+    "TaskCategory": 3,
+    "TaskPriority": 2,
     "Responsibility": {
-      "TasksAssigned": null,
       "FirstName": "Tom",
       "Surname": "Sawyer"
     },
-    "Colour": "#FFF9C12D",
+    "Colour": "#FFB42222",
     "IsVisible": "Visible"
   },
   {
     "Title": "walk the dog",
-    "Description": "take the dog into town",
-    "DueDate": "2019-03-21T00:00:00",
+    "Description": "bring the dog out to the park for a walk",
+    "DueDate": "2019-03-23T00:00:00",
     "Labels": [
-      "walk",
-      "outside",
-      "exercise"
+      "#walk",
+      "#dog",
+      "#park"
     ],
-    "Tags": "walk,outside,exercise",
+    "Tags": "walk,dog,park",
+    "TaskCategory": 1,
+    "TaskPriority": 0,
+    "Responsibility": {
+      "FirstName": "brian",
+      "Surname": "keaveney"
+    },
+    "Colour": "#FFF9C12D",
+    "IsVisible": "Hidden"
+  },
+  {
+    "Title": "angular-app",
+    "Description": "start the web programming assignment",
+    "DueDate": "2019-04-07T00:00:00",
+    "Labels": [
+      "#angular",
+      "#college",
+      "#coding"
+    ],
+    "Tags": "angular,college,coding",
     "TaskCategory": 2,
     "TaskPriority": 2,
     "Responsibility": {
-      "TasksAssigned": null,
-      "FirstName": "brian",
-      "Surname": "keaveney"
+      "FirstName": "Eddie",
+      "Surname": "Dean"
     },
     "Colour": "#FFB42222",
     "IsVisible": "Hidden"
