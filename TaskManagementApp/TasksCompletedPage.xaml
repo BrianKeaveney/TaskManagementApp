@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TasksCompletedPage"
-      Background="White" Loaded="Page_Loaded">
+      Background="#FF464343" Loaded="Page_Loaded">
 
     <Grid>
         <ListBox x:Name="lbxTasksCompleted" HorizontalAlignment="Left" Height="244" Margin="243,107,0,0" VerticalAlignment="Top" Width="362"/>
