@@ -51,3 +51,4 @@ C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\bin\D
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TasksCompletedPage.g.cs
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TasksCompletedPage.baml
 C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csproj.CopyComplete
+C:\Users\brian\OneDrive\Documents\Code\TaskManagementApp\TaskManagementApp\obj\Debug\TaskManagementApp.csprojAssemblyReference.cache
